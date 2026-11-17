@@ -34,10 +34,18 @@ def filtrar_por_estacion(estacion_solicitada, lista_validos):
 def calcular_datos(lista_solicitados):
     diccionario = {}
     cantidad = len(lista_solicitados)
-    temp_minima = medicion.temperatura
-    temp_maxima = medicion.temperatura
-    for medicion in lista_solicitados:
-        sumador = 
-
-
-
+    sumador = 0
+    minimo = lista_solicitados[0]
+    maximo = lista_solicitados[0]
+    for dato in lista_solicitados:
+        if dato.temperatura<minimo.temperatura:
+            minimo = dato
+        if dato.temperatura>maximo.temperatura:
+            maximo = dato
+        sumador += dato.temperatura
+    promedio = sumador/cantidad
+    diccionario["cantidad"] = cantidad
+    diccionario["maxima"] = maximo
+    diccionario["minima"] = minimo
+    diccionario["promedio"] = promedio
+    return diccionario
