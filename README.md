@@ -1,5 +1,5 @@
 # recuperatorio-smn
-<img width="900" height="141" alt="WhatsApp Image 2026-11-18 at 02 21 17" src="https://github.com/user-attachments/assets/d3306c27-47ff-4349-be34-63297930384a" />
+<img width="1000" height="130" alt="WhatsApp Image 2026-11-18 at 02 21 17" src="https://github.com/user-attachments/assets/d3306c27-47ff-4349-be34-63297930384a" />
 
 
 
