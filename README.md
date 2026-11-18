@@ -9,12 +9,14 @@ Cada observación se representa con un objeto de tipo Observacion y resume las t
 En observacion.py se crea la clase Observacion con los metodos:
 - verificar_estacion(): compara la estacion con el nombre que pida el usuario
 - intensidad_viento(): devuelve la intensidad del viento segun su velocidad
+
             | Intensidad | Velocidad |
             |---|---|
             | `calma` | menor a 2 km/h |
             | `leve` | desde 2 y menor a 20 km/h |
             | `moderado` | desde 20 y menor a 40 km/h |
             | `fuerte` | 40 km/h o más |
+
 - mensaje(): regresa un mensaje con el formato solicitado por el profesor
 
 En consultar_clima.py se definen las funciones:
