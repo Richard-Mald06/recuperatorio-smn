@@ -1,4 +1,5 @@
 # Recuperatorio-smn
+Alumno: Ricardo Maldonado
 <img width="1000" height="130" alt="WhatsApp Image 2026-11-18 at 02 21 17" src="https://github.com/user-attachments/assets/d3306c27-47ff-4349-be34-63297930384a" />
 
 ## Descripcion
@@ -26,8 +27,29 @@ En consultar_clima.py se definen las funciones:
 
 Main.py: codigo principal proporcionado por el profesor, se completa utilizando las funciones creadas en consultar_clima.py
 
-# Como utilizar el programa
+## Como utilizar el programa
+## Preparar el entorno
+1. Crear el entorno virtual:
 
+```bash
+python -m venv .venv
+```
+2. Instalar las dependencias:
+
+```bash
+pip install -r requirements.txt
+```
+## Comando en terminal
+Para ejecutar el codigo debe escribirse la solicitud con el siguiente formato:
+```bash
+python main.py observaciones.json "AEROPARQUE AERO" 
+```
+siendo el ultimo argumento la estacion de la cual deseo ver las observaciones
+
+## Ejecutar las pruebas
+```bash
+pytest
+```
 
 <img width="600" height="323" alt="WhatsApp Image 2026-11-17 at 18 29 32" src="https://github.com/user-attachments/assets/37638f8b-4241-4b73-b1a5-14141aa190f8" />
 
