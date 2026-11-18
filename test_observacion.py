@@ -1,12 +1,15 @@
 from observacion import Observacion
-from consultar_clima import leer_json, calcular_datos
+import pytest
 
-# AEROPARQUE AERO | 1 h | 8.6 °C | 66 % | 11 km/h (leve)
-# AEROPARQUE AERO | 2 h | 8.0 °C | 69 % | 13 km/h (leve)
+instancia = Observacion("AEROPARQUE AERO", 1, 8.6, 66, 11)
 
+def test_comprobar_atributos():
+    assert instancia.estacion == "AEROPARQUE AERO"
+    assert instancia.hora == 1
+    assert instancia.temperatura == 8.6
+    assert instancia.humedad == 66
+    assert instancia.velocidad_viento == 11
 
-lista = [Observacion("AEROPARQUE AERO", 0, 8, 70, 13), Observacion("AEROPARQUE AERO", 1, 8.6, 66, 11)]
-diccionario = calcular_datos(lista)
-
-for dato, item in diccionario.items():
-    print(f"{dato}: {item}")
+def test_validacion_invalida():
+    with pytest.raises(ValueError):
+        Observacion("", 1, 8.6, 66, 11)

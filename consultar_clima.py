@@ -9,7 +9,7 @@ def leer_json(ruta_json):
 
     for registro in contenido:
         try:
-            registro_valido = Observacion(
+            instancia_observacion = Observacion(
             estacion = registro["estacion"],
             hora = registro["hora"],
             temperatura = registro["temperatura"],
@@ -19,7 +19,7 @@ def leer_json(ruta_json):
         except ValueError:
             errores += 1
             continue
-        lista_validos.append(registro_valido)
+        lista_validos.append(instancia_observacion)
     print(f"se excluyeron {errores} registros que no son validos")
     return lista_validos
 
