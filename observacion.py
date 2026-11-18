@@ -10,6 +10,9 @@ class Observacion:
         if temperatura is None or humedad is None or velocidad_viento is None:
             raise ValueError("La temperatura, la humedad o la velocidad del viento no pueden faltar.") 
 
+        if temperatura < -30:
+            raise ValueError("las temperaturas no deben ser menores a -30°")
+
         if not 0<=humedad<=100:
             raise ValueError("La humedad debe estar entre 0 y 100.")
 
@@ -40,3 +43,8 @@ class Observacion:
 
     def mensaje(self):
         return f"{self.estacion} | {self.hora} h | {self.temperatura} °C | {self.humedad} % | {self.velocidad_viento} km/h ({self.intensidad_viento()})"
+
+    def horas_heladas(self):
+        if self.temperatura <= 0:
+            return True
+        return False

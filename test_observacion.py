@@ -9,6 +9,7 @@ def test_comprobar_atributos():
     assert instancia.temperatura == 8.6
     assert instancia.humedad == 66
     assert instancia.velocidad_viento == 11
+    assert instancia.horas_heladas() == False
 
 def test_validacion_invalida():
     with pytest.raises(ValueError):

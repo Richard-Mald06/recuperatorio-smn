@@ -21,6 +21,7 @@ def leer_json(ruta_json):
             continue
         lista_validos.append(instancia_observacion)
     print(f"se excluyeron {errores} registros que no son validos")
+    print(f"hay {len(lista_validos)} registros validos")
     return lista_validos
 
 def filtrar_por_estacion(estacion_solicitada, lista_validos):
@@ -49,3 +50,13 @@ def calcular_datos(lista_solicitados):
     diccionario["minima"] = minimo
     diccionario["promedio"] = promedio
     return diccionario
+
+
+def calcular_horas_helada(lista_solicitados):
+    contador_horas = 0
+    horas_heladas = []
+    for observacion in lista_solicitados:
+        if observacion.horas_heladas():
+            contador_horas += 1
+            horas_heladas.append(observacion)
+    return contador_horas, horas_heladas
